@@ -1,0 +1,156 @@
+.connected-carousels
+    .stage
+        width 400px
+        position relative
+        float left
+        margin-right 20px
+        margin-top 20px
+    .photo-credits
+        position absolute
+        right 15px
+        bottom 0
+        font-size 13px
+        color #fff
+        text-shadow 0 0 1px rgba(0,0,0,.85)
+        opacity .66
+        a
+            color #fff
+    .navigation
+        width 75px
+        margin 20px auto
+        position relative
+        float left
+        margin 37px auto
+        width 350px
+        float none
+        width 280px
+    .carousel
+        overflow hidden
+        position relative
+        ul
+            position relative
+            list-style none
+            margin 0
+            padding 0
+            width 2000em
+            li
+                margin-bottom 20px
+                float left
+                &:last-child
+                    margin-bottom 0
+    .carousel-stage
+        height 400px
+        height 290px
+        height 400px
+        height 300px
+    .carousel-navigation
+        width 75px
+        height 160px
+        height 70px
+        width 210px
+        width 140px
+        li
+            cursor pointer
+            img
+                display block
+                border 3px solid #fff
+            &.active
+                img
+                    border-color #1f1c20
+        ul
+            width 200em
+            height 70px
+    .prev-stage
+        left 0
+        span
+            left 20px
+    .next-stage
+        right 0
+        span
+            right 20px
+    .prev-navigation
+        left -15px
+        top 22px
+        text-indent 6px
+    .next-navigation
+        right -15px
+        top 22px
+        text-indent 20px
+
+.connected-carousels .prev-stage,.connected-carousels .next-stage
+    display block
+    position absolute
+    top 0
+    width 305px
+    height 410px
+    color #fff
+
+.connected-carousels .prev-stage.inactive,.connected-carousels .next-stage.inactive
+    display none
+
+.connected-carousels .prev-stage span,.connected-carousels .next-stage span
+    display none
+    position absolute
+    top 50%
+    width 30px
+    height 30px
+    text-align center
+    background #4e443c
+    color #fff
+    text-decoration none
+    text-shadow 0 0 1px #000
+    font 24px/27px Arial,sans-serif
+    -webkit-border-radius 30px
+    -moz-border-radius 30px
+    border-radius 30px
+    -webkit-box-shadow 0 0 2px #999
+    -moz-box-shadow 0 0 2px #999
+    box-shadow 0 0 2px #999
+
+.connected-carousels .prev-stage:hover span,.connected-carousels .next-stage:hover span
+    display block
+
+.connected-carousels .prev-navigation,.connected-carousels .next-navigation
+    display block
+    position absolute
+    width 30px
+    height 30px
+    background #4e443c
+    color #fff
+    text-decoration none
+    text-shadow 0 0 1px #000
+    font 16px/29px Arial,sans-serif
+    -webkit-border-radius 30px
+    -moz-border-radius 30px
+    border-radius 30px
+    -webkit-box-shadow 0 0 2px #999
+    -moz-box-shadow 0 0 2px #999
+    box-shadow 0 0 2px #999
+
+.connected-carousels .prev-navigation.inactive,.connected-carousels .next-navigation.inactive
+    opacity .5
+    cursor default
+
+@media screen and (max-width:980px)
+    .connected-carousels
+        .stage
+            width 290px
+
+.right_block
+    .stage
+        .carousel-stage
+            img
+                width 290px
+                width 400px
+                width 300px
+
+@media screen and (max-width:768px)
+    .connected-carousels
+        .stage
+            width 400px
+            float none
+
+@media screen and (max-width:480px)
+    .connected-carousels
+        .stage
+            width 300px

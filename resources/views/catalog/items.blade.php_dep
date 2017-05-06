@@ -1,0 +1,505 @@
+
+<div class="row cards-placement">
+    <div class="col-xs-12">
+        <div class="">
+            <div class="col-xs-12">
+                <div class="bx_catalog_text" id="hidden_block_cat_list">
+                    <ul class="bx_catalog_text_ul">
+                        <li id="bx_1847241719_18"><h2 class="bx_catalog_text_title"><a href="/catalog/big/">Большие</a>
+                            </h2></li>
+                        <li id="bx_1847241719_19"><h2 class="bx_catalog_text_title"><a
+                                        href="/catalog/middle/">Средние</a></h2></li>
+                        <li id="bx_1847241719_20"><h2 class="bx_catalog_text_title"><a href="/catalog/small/">Малые</a>
+                            </h2></li>
+                    </ul>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div class="catalog_grid">
+                    <h1>{{$allCategories[$pageItem]->name}}</h1>
+                    <div class="filter_product   ">
+
+
+@foreach($brands as $brand)
+
+
+    @php ($brandLink = "/catalog/{$pageItem}/{$brand->id}")
+
+       <a class="@if(url($brandLink) == url()->current()) active @endif" href="{!!  $brandLink !!} ">{{$brand->title}}</a>
+    @endforeach
+
+
+
+                    </div>
+                    <div class="grid" style="position: relative; height: 2250px;">
+
+
+                        @include('catalog.products')
+
+
+{{--@foreach($products as $product)--}}
+                        {{--@include('catalog.item',['product'=>$product])--}}
+                        {{--@endforeach--}}
+
+
+
+
+
+
+                         {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator" width="300"  src="http://bag-bag.ru/pictures/766188592.jpg">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-3705fuksia Клатч Casanave</a> </p>--}}
+                            {{--</div>--}}
+                             {{--<div class="grid_price"><span--}}
+                                         {{--class=" teal green-text" style="color:green; margin-left: 10px; float: left;"><i--}}
+                                             {{--class="material-icons ">done_all</i></span><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                     {{--2 500 руб. </a><span--}}
+                                         {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                             {{--class="material-icons right">more_vert</i></span></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-2013ROSE Клатч Casanave<i--}}
+                                                {{--class="material-icons close-btn right">close</i></span>--}}
+                                {{--<p>- Страна производитель: Италия--}}
+                                    {{--- Бренд: Casanave--}}
+                                    {{--- Материал: велюр, под замшу--}}
+                                    {{--- Застежка: магнит--}}
+                                    {{--- Размер: длина - 30 см; высота - 16 см; ширина - 4 см;--}}
+                                    {{--- Внутри: одно отделение, маленький карман--}}
+                                    {{--- Клатч носится в руке, пристегивается длинная цепочка--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Цвет: фуксия</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator" width="300"  src="http://bag-bag.ru/pictures/473329240.JPG">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-S46 GRAY--}}
+                                        {{--Сумочка- конверт Casanave--}}
+                                        {{--"Firenze"</a> </p>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                    {{--8 500 руб. </a><span--}}
+                                        {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                            {{--class="material-icons right">more_vert</i></span></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-S46 GRAY--}}
+                                        {{--Сумочка- конверт Casanave--}}
+                                        {{--"Firenze"<i--}}
+                                                {{--class="material-icons close-btn right">close</i></span>--}}
+                                {{--<p>- Бренд: Casanave, Италия--}}
+                                    {{--- Материал: 100% натуральная кожа теленка--}}
+                                    {{--- Размер: длина - 30 см; высота - 19,5 см; ширина – 4 см; высота ручек – 13 см;--}}
+                                    {{--- Внутри: два основных отделения, карман перегородка на молнии--}}
+                                    {{--- Снаружи: карманов нет--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Сумка закрывается фигурным клапаном на три магнитные кнопки--}}
+                                    {{--- Плечевой ремень: есть--}}
+                                    {{--- Цвет: серый--}}
+                                    {{--В комплект входит:--}}
+                                    {{--Фирменная упаковка Casanave (бирки, ярлыки, тесьма, картонный пакет)</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator"   src="http://bag-bag.ru/pictures/100000360.JPG">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-S100BLU--}}
+                                        {{--Маленькая Сумочка Casanave--}}
+                                        {{--"Every day" mini</a> </p>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                    {{--8 700 руб. </a><span--}}
+                                        {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                            {{--class="material-icons right">more_vert</i></span></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-S100BLU--}}
+{{--Маленькая Сумочка Casanave--}}
+{{--"Every day" mini<i--}}
+                                                {{--class="material-icons close-btn right">close</i></span>--}}
+                                {{--<p>- Бренд: Casanave, Италия--}}
+                                    {{--- Материал: 100% натуральная кожа теленка--}}
+                                    {{--- Размер: длина - 24 см; высота - 18 см; ширина – 7,5 см;--}}
+                                    {{--- Внутри: одно отделение--}}
+                                    {{--- Снаружи: карманов нет--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Сумка застегивается на молнию--}}
+                                    {{--- Плечевой ремень: есть, регулируется по длине--}}
+                                    {{--- Цвет: ярко голубой--}}
+                                    {{--В комплект входит:--}}
+                                    {{--Фирменная упаковка Casanave (бирки, ярлыки, тесьма, картонный пакет)--}}
+                                    {{--Фирменный мешочек для хранения</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator" width="300"  src="http://bag-bag.ru/pictures/766188592.jpg">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-3705fuksia Клатч Casanave</a> </p>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                    {{--2 500 руб. </a><span--}}
+                                        {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                            {{--class="material-icons right">more_vert</i></span></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-2013ROSE Клатч Casanave<i--}}
+                                                {{--class="material-icons close-btn right">close</i></span>--}}
+                                {{--<p>- Страна производитель: Италия--}}
+                                    {{--- Бренд: Casanave--}}
+                                    {{--- Материал: велюр, под замшу--}}
+                                    {{--- Застежка: магнит--}}
+                                    {{--- Размер: длина - 30 см; высота - 16 см; ширина - 4 см;--}}
+                                    {{--- Внутри: одно отделение, маленький карман--}}
+                                    {{--- Клатч носится в руке, пристегивается длинная цепочка--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Цвет: фуксия</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator" width="300"  src="http://bag-bag.ru/pictures/766188592.jpg">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-3705fuksia Клатч Casanave</a> <span--}}
+                                            {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                                {{--class="material-icons right">more_vert</i></span></p>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                    {{--2 500 руб. </a></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-2013ROSE Клатч Casanave<i--}}
+                                                {{--class="material-icons close-btn right">close</i></span>--}}
+                                {{--<p>- Страна производитель: Италия--}}
+                                    {{--- Бренд: Casanave--}}
+                                    {{--- Материал: велюр, под замшу--}}
+                                    {{--- Застежка: магнит--}}
+                                    {{--- Размер: длина - 30 см; высота - 16 см; ширина - 4 см;--}}
+                                    {{--- Внутри: одно отделение, маленький карман--}}
+                                    {{--- Клатч носится в руке, пристегивается длинная цепочка--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Цвет: фуксия</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" >--}}
+
+                            {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                {{--<img class="activator" width="300"  src="http://bag-bag.ru/pictures/766188592.jpg">--}}
+                            {{--</div>--}}
+                            {{--<div class="card-content grid_title">--}}
+
+                                {{--<p><a href="#">C-3705fuksia Клатч Casanave</a> <span--}}
+                                            {{--class="card-title activator right grey-text text-darken-4"><i--}}
+                                                {{--class="material-icons right">more_vert</i></span></p>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                    {{--2 500 руб. </a></div>--}}
+                            {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-2013ROSE Клатч Casanave<i--}}
+                                                {{--class="material-icons right">close</i></span>--}}
+                                {{--<p>- Страна производитель: Италия--}}
+                                    {{--- Бренд: Casanave--}}
+                                    {{--- Материал: велюр, под замшу--}}
+                                    {{--- Застежка: магнит--}}
+                                    {{--- Размер: длина - 30 см; высота - 16 см; ширина - 4 см;--}}
+                                    {{--- Внутри: одно отделение, маленький карман--}}
+                                    {{--- Клатч носится в руке, пристегивается длинная цепочка--}}
+                                    {{--- Фурнитура: под серебро--}}
+                                    {{--- Цвет: фуксия</p>--}}
+                            {{--</div>--}}
+
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<!------------>--}}
+
+
+
+                        {{--<div class="grid-item" style="position: absolute; left: 0px; top: 0px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/black_soft_grand_zipper/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/1ff/600_590_2/1ff00987cae0d6d797450a7e252f6c3b.jpg?1490788440119831"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/black_soft_grand_zipper/">black soft--}}
+                                    {{--grand zipper</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/black_soft_grand_zipper/">--}}
+                                    {{--8 000 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 0px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/serebryanyy_medium/"><img--}}
+                                            {{--src="http://bag-bag.ru/pictures/916795253.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/serebryanyy_medium/">серебряный--}}
+                                    {{--medium</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/serebryanyy_medium/">--}}
+                                    {{--2 500 руб. </a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item card sticky-action" style="position: absolute; left: 0px; top: 375px;">--}}
+
+                                 {{--<div class="grid_image  card-image  waves-block waves-light">--}}
+                                    {{--<img class="activator" width="300px" src="http://bag-bag.ru/pictures/453621831.JPG">--}}
+                                {{--</div>--}}
+                                {{--<div class="card-content grid_title">--}}
+
+                                    {{--<p><a href="#">C-2013ROSE Клатч Casanave</a> <span--}}
+                                                {{--class="card-title activator grey-text text-darken-4"><i--}}
+                                                    {{--class="material-icons right">more_vert</i></span></p>--}}
+                                {{--</div>--}}
+                                {{--<div class="card-reveal " style=" ">--}}
+                                    {{--<span class="card-title grey-text text-darken-4">C-2013ROSE Клатч Casanave<i--}}
+                                                {{--class="material-icons right">close</i></span>--}}
+                                    {{--<p>- Бренд: Casanave, Италия--}}
+                                        {{--- Материал: атлас--}}
+                                        {{--- Размер: длина - 22 см; высота - 19 см; ширина - 3 см;--}}
+                                        {{--- Внутри: одно отделения внутри, карман--}}
+                                        {{--- Фурнитура: под серебро--}}
+                                        {{--- Закрытие: замок "поцелуй"--}}
+                                        {{--- Длинная цепочка: есть--}}
+                                        {{--- Цвет: красный--}}
+                                        {{--В комплекте:--}}
+                                        {{--- фирменный мешок для хранения,--}}
+                                        {{--- картонный фирменный пакет</p>--}}
+                                {{--</div>--}}
+                                {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                                        {{--2 500 руб. </a></div>--}}
+
+
+
+                            {{--<div class="grid_image waves-effect waves-light"><a href="/catalog/backpacks/karamelnyy_mini/"><img src="http://bag-bag.ru/pictures/453621831.JPG" alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/karamelnyy_mini/">карамельный mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/karamelnyy_mini/">--}}
+                            {{--2 500 руб.				</a></div>--}}
+                        {{--</div>--}}
+
+
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 375px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/bledno_zheltyy_mini/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/c99/600_590_2/c995269c77af45ad2b8aea91e2149478.jpg?1490784018126712"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/bledno_zheltyy_mini/">бледно-желтый--}}
+                                    {{--mini</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/bledno_zheltyy_mini/">--}}
+                                    {{--5 500 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 0px; top: 750px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/green_bronze_medium_/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/9cf/600_590_2/9cfcc33ce8577d8ee771e641a2c13027.jpg?1490277044141701"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/green_bronze_medium_/">green-bronze--}}
+                                    {{--suede medium </a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/green_bronze_medium_/">--}}
+                                    {{--6 500 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 750px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/grey_druid_medium/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8ec/600_590_2/8ecc6414c02d90bd9fa0611f6209a537.jpg?1490276575131986"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/grey_druid_medium/">grey druid--}}
+                                    {{--medium</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/grey_druid_medium/">--}}
+                                    {{--6 500 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 0px; top: 1125px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/green_wax_mini/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/ee5/600_590_2/ee5238588eda2cd564e8235a20b6f694.jpg?1490276335141615"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/green_wax_mini/">green wax mini</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/green_wax_mini/">--}}
+                                    {{--5 500 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 1125px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/grey_druid_box_2_0/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/da7/600_590_2/da79f454105d2d413670efee9ab99431.jpg?1489511897145077"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/grey_druid_box_2_0/">grey druid box--}}
+                                    {{--2.0</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/grey_druid_box_2_0/">--}}
+                                    {{--8 000 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 0px; top: 1500px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/grey_beige_box_2_0/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/d6e/600_590_2/d6ecf709576929c44cf3affe4a44ac25.jpg?1489507546144725"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/grey_beige_box_2_0/">grey-beige box--}}
+                                    {{--2.0</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/grey_beige_box_2_0/">--}}
+                                    {{--8 000 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 1500px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/california_antracite_2_0/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/e1f/600_590_2/e1ff8e50fd29075de8144b60a805f739.jpg?1489506906143449"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/california_antracite_2_0/">california--}}
+                                    {{--antracite 2.0</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/california_antracite_2_0/">--}}
+                                    {{--8 000 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 0px; top: 1875px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/brown_buffalo_medium/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/b09/600_590_2/b09abc6c088c3d184c6e3bb3a947386b.jpg?1489507007136903"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/brown_buffalo_medium/">brown buffalo--}}
+                                    {{--medium</a></div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/brown_buffalo_medium/">--}}
+                                    {{--6 500 руб. </a></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="grid-item" style="position: absolute; left: 300px; top: 1875px;">--}}
+                            {{--<div class="grid_image waves-effect waves-light"><a--}}
+                                        {{--href="/catalog/backpacks/navy_blue_zipper/"><img--}}
+                                            {{--src="//virronen.com.opt-images.1c-bitrix-cdn.ru/upload/resize_cache/iblock/78c/600_590_2/78cd9ae6cfa3bd44b28993de5b94ce32.jpg?1489505475158669"--}}
+                                            {{--alt=""></a></div>--}}
+                            {{--<div class="grid_title"><a href="/catalog/backpacks/navy_blue_zipper/">navy-blue zipper</a>--}}
+                            {{--</div>--}}
+                            {{--<div class="grid_price"><a href="/catalog/backpacks/navy_blue_zipper/">--}}
+                                    {{--6 900 руб. </a></div>--}}
+                        {{--</div>--}}
+                    </div>
+
+                    <div class="navigation">
+                    @include('catalog.navigation')
+                    </div>
+                    {{--<div class="navigation">--}}
+
+
+
+                        {{--<div class="navigation-arrows">--}}
+                            {{--<a class="more_product" href="/catalog/backpacks/?PAGEN_1=2">Загрузить еще</a>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="navigation-pages">--}}
+                            {{--<span class="navigation-title">Страницы:</span>--}}
+                            {{--<span class="nav-current-page">1</span>--}}
+                            {{--<a href="/catalog/backpacks/?PAGEN_1=2">2</a>--}}
+                            {{--<a href="/catalog/backpacks/?PAGEN_1=3">3</a>--}}
+                            {{--... <a href="/catalog/backpacks/?PAGEN_1=10">10</a>--}}
+                            {{--<a href="/catalog/backpacks/?PAGEN_1=11">11</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<script type="text/javascript">--}}
+                        {{--BX.bind(document, "keydown", function (event) {--}}
+
+                            {{--event = event || window.event;--}}
+                            {{--if (!event.ctrlKey)--}}
+                                {{--return;--}}
+
+                            {{--var target = event.target || event.srcElement;--}}
+                            {{--if (target && target.nodeName && (target.nodeName.toUpperCase() == "INPUT" || target.nodeName.toUpperCase() == "TEXTAREA"))--}}
+                                {{--return;--}}
+
+                            {{--var key = (event.keyCode ? event.keyCode : (event.which ? event.which : null));--}}
+                            {{--if (!key)--}}
+                                {{--return;--}}
+
+                            {{--var link = null;--}}
+                            {{--if (key == 39)--}}
+                                {{--link = BX('navigation_1_next_page');--}}
+                            {{--else if (key == 37)--}}
+                                {{--link = BX('navigation_1_previous_page');--}}
+
+                            {{--if (link && link.href)--}}
+                                {{--document.location = link.href;--}}
+                        {{--});--}}
+                    {{--</script>--}}
+                </div>
+
+
+                <script type="text/javascript">
+//                    BX.Currency.setCurrencies([{
+//                        'CURRENCY': 'RUB',
+//                        'FORMAT': {
+//                            'FORMAT_STRING': '# руб.',
+//                            'DEC_POINT': '.',
+//                            'THOUSANDS_SEP': ' ',
+//                            'DECIMALS': 2,
+//                            'THOUSANDS_VARIANT': 'S',
+//                            'HIDE_ZERO': 'Y'
+//                        }
+//                    }]);
+                </script>
+            </div>
+        </div>
+    </div>
+</div>

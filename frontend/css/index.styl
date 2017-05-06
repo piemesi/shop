@@ -1,0 +1,80 @@
+@require './1';
+@require './2';
+@require './3'
+@require "cards-placement"
+@require './4'
+@require './5'
+@require "6jcarousel_connected-carousels.styl"
+@require "7jquery_fancybox.styl"
+@require "8flickity_min.styl"
+@require "9photoswipe.styl"
+@require "10default-skin.styl"
+
+@require "catalog.styl"
+
+//@import "~materialize-css/dist/css/materialize.min.css";
+
+//@reguire 'materialize-css/dist/css/materialize.min.css'; //materialize-css/dist/css/materialize.min.css
+
+//@require.context('./', false, /\.styl$/ )
+
+
+.navigaton
+    width 61%
+    max-width 780px
+
+.submenu-place
+    .nav
+        margin-left 5px
+        a
+            text-transform none
+
+.nav
+    li a:after
+       border-bottom: 2px solid #b4b4b4;
+
+.bottomborder
+    border-bottom: 1px solid #ddd;
+
+.grid-item
+    margin-bottom: 10px;
+
+
+.cards-placement .grid-item
+    height 375px
+    padding-bottom: 5px;
+
+
+.card .card-content
+    padding inherit
+
+
+
+
+.card .card-reveal
+    background-color #eee
+    font-size: 15px;
+
+
+
+.card .card-reveal .card-title
+    font-size: inherit;
+    font-weight: 800;
+    text-align: left;
+
+.close-btn
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+.custom_background
+        background: #f9f9f9;
+
+
+.infopage
+    //width: 90%
+    button
+        height: 50px;
+        display: list-item;
+        text-align: -webkit-match-parent;
+
